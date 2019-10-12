@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Club List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ClubListViewController" id="BYZ-38-t0r" customClass="ClubListViewController" customModule="FootballCamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FIq-ZG-lG9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FIq-ZG-lG9" secondAttribute="bottom" id="Hwq-0a-5I9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FIq-ZG-lG9" secondAttribute="trailing" id="WYr-wX-22F"/>
+                            <constraint firstItem="FIq-ZG-lG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bDP-PS-cDw"/>
+                            <constraint firstItem="FIq-ZG-lG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pkq-cZ-QuZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="113"/>
+        </scene>
+        <!--Club Details View Controller-->
+        <scene sceneID="v52-bp-zs5">
+            <objects>
+                <viewController storyboardIdentifier="ClubDetailsViewController" id="Fvv-Fj-Ndd" customClass="ClubDetailsViewController" customModule="FootballCamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pF5-ES-VC6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zia-w6-Df2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="245.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-sa-gHX">
+                                <rect key="frame" x="20" y="269.5" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hOM-R8-Mdz">
+                                <rect key="frame" x="0.0" y="289.5" width="414" height="572.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hOM-R8-Mdz" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="5kz-g7-DfZ"/>
+                            <constraint firstItem="hOM-R8-Mdz" firstAttribute="top" secondItem="zia-w6-Df2" secondAttribute="bottom" id="Alb-gM-kFi"/>
+                            <constraint firstItem="VCC-sa-gHX" firstAttribute="bottom" secondItem="zia-w6-Df2" secondAttribute="bottom" constant="-20" id="Iv3-zH-INR"/>
+                            <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="VCC-sa-gHX" secondAttribute="trailing" constant="20" id="OgM-tN-CBz"/>
+                            <constraint firstItem="zia-w6-Df2" firstAttribute="top" secondItem="yor-g9-fWn" secondAttribute="top" id="UCW-rd-NR2"/>
+                            <constraint firstItem="yor-g9-fWn" firstAttribute="bottom" secondItem="hOM-R8-Mdz" secondAttribute="bottom" id="fA0-Ft-CXv"/>
+                            <constraint firstItem="zia-w6-Df2" firstAttribute="height" secondItem="yor-g9-fWn" secondAttribute="height" multiplier="0.3" id="gl0-6E-fcp"/>
+                            <constraint firstItem="zia-w6-Df2" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="lfL-sc-dbf"/>
+                            <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="zia-w6-Df2" secondAttribute="trailing" id="oJ5-7q-CQv"/>
+                            <constraint firstItem="zia-w6-Df2" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="vlo-i3-8kP"/>
+                            <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="hOM-R8-Mdz" secondAttribute="trailing" id="ydI-c0-tpk"/>
+                            <constraint firstItem="VCC-sa-gHX" firstAttribute="leading" secondItem="zia-w6-Df2" secondAttribute="leading" constant="20" id="zMI-Lt-HTy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yor-g9-fWn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRN-ky-oe7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="126"/>
+        </scene>
+    </scenes>
+</document>
