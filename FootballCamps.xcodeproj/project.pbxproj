@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42134752351DCE700FA0BFD /* ClubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42134742351DCE700FA0BFD /* ClubTableViewCell.xib */; };
+		E42134772351E09C00FA0BFD /* ClubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42134762351E09C00FA0BFD /* ClubTableViewCell.swift */; };
 		E493B91C2351D53300DE83A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B91B2351D53300DE83A6 /* AppDelegate.swift */; };
 		E493B91E2351D53300DE83A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B91D2351D53300DE83A6 /* SceneDelegate.swift */; };
 		E493B9202351D53300DE83A6 /* ClubListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B91F2351D53300DE83A6 /* ClubListViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E42134742351DCE700FA0BFD /* ClubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubTableViewCell.xib; sourceTree = "<group>"; };
+		E42134762351E09C00FA0BFD /* ClubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTableViewCell.swift; sourceTree = "<group>"; };
 		E493B9182351D53300DE83A6 /* FootballCamps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballCamps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B91B2351D53300DE83A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E493B91D2351D53300DE83A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E42134782351E21800FA0BFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E493B91F2351D53300DE83A6 /* ClubListViewController.swift */,
+				E493B93D2351DB6800DE83A6 /* ClubDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E42134792351E22600FA0BFD /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				E493B91B2351D53300DE83A6 /* AppDelegate.swift */,
+				E493B91D2351D53300DE83A6 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		E421347A2351E23C00FA0BFD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E493B9212351D53300DE83A6 /* Main.storyboard */,
+				E493B9262351D53600DE83A6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E421347B2351E24F00FA0BFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E42134742351DCE700FA0BFD /* ClubTableViewCell.xib */,
+				E42134762351E09C00FA0BFD /* ClubTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E421347C2351E26C00FA0BFD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E493B9242351D53600DE83A6 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E493B90F2351D53300DE83A6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +129,11 @@
 		E493B91A2351D53300DE83A6 /* FootballCamps */ = {
 			isa = PBXGroup;
 			children = (
-				E493B91B2351D53300DE83A6 /* AppDelegate.swift */,
-				E493B91D2351D53300DE83A6 /* SceneDelegate.swift */,
-				E493B91F2351D53300DE83A6 /* ClubListViewController.swift */,
-				E493B9212351D53300DE83A6 /* Main.storyboard */,
-				E493B93D2351DB6800DE83A6 /* ClubDetailsViewController.swift */,
-				E493B9242351D53600DE83A6 /* Assets.xcassets */,
-				E493B9262351D53600DE83A6 /* LaunchScreen.storyboard */,
+				E42134792351E22600FA0BFD /* AppDelegates */,
+				E42134782351E21800FA0BFD /* ViewControllers */,
+				E421347A2351E23C00FA0BFD /* Storyboards */,
+				E421347B2351E24F00FA0BFD /* Views */,
+				E421347C2351E26C00FA0BFD /* Assets */,
 				E493B9292351D53600DE83A6 /* Info.plist */,
 			);
 			path = FootballCamps;
@@ -186,6 +232,7 @@
 				E493B9282351D53600DE83A6 /* LaunchScreen.storyboard in Resources */,
 				E493B9252351D53600DE83A6 /* Assets.xcassets in Resources */,
 				E493B9232351D53300DE83A6 /* Main.storyboard in Resources */,
+				E42134752351DCE700FA0BFD /* ClubTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +253,7 @@
 				E493B9202351D53300DE83A6 /* ClubListViewController.swift in Sources */,
 				E493B93E2351DB6800DE83A6 /* ClubDetailsViewController.swift in Sources */,
 				E493B91C2351D53300DE83A6 /* AppDelegate.swift in Sources */,
+				E42134772351E09C00FA0BFD /* ClubTableViewCell.swift in Sources */,
 				E493B91E2351D53300DE83A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
