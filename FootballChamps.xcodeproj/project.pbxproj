@@ -66,7 +66,7 @@
 		E48861B52351F8070064F80D /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
 		E48B95B82352663000CE1C3D /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
 		E48B95BB23526C4200CE1C3D /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
-		E493B9182351D53300DE83A6 /* FootballCamps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballCamps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E493B9182351D53300DE83A6 /* FootballChamps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballChamps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B91B2351D53300DE83A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E493B91D2351D53300DE83A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E493B91F2351D53300DE83A6 /* ClubListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubListViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		E493B9242351D53600DE83A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E493B9272351D53600DE83A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E493B9292351D53600DE83A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E493B92E2351D53600DE83A6 /* FootballCampsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballCampsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E493B92E2351D53600DE83A6 /* FootballChampsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballChampsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B9322351D53600DE83A6 /* FootballCampsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballCampsTests.swift; sourceTree = "<group>"; };
 		E493B9342351D53600DE83A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E493B93D2351DB6800DE83A6 /* ClubDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailsViewController.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		E493B9192351D53300DE83A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E493B9182351D53300DE83A6 /* FootballCamps.app */,
-				E493B92E2351D53600DE83A6 /* FootballCampsTests.xctest */,
+				E493B9182351D53300DE83A6 /* FootballChamps.app */,
+				E493B92E2351D53600DE83A6 /* FootballChampsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E493B9172351D53300DE83A6 /* FootballCamps */ = {
+		E493B9172351D53300DE83A6 /* FootballChamps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E493B9372351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballCamps" */;
+			buildConfigurationList = E493B9372351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballChamps" */;
 			buildPhases = (
 				85425933DA43B29ADF5731D3 /* [CP] Check Pods Manifest.lock */,
 				E493B9142351D53300DE83A6 /* Sources */,
@@ -305,14 +305,14 @@
 			);
 			dependencies = (
 			);
-			name = FootballCamps;
+			name = FootballChamps;
 			productName = FootballCamps;
-			productReference = E493B9182351D53300DE83A6 /* FootballCamps.app */;
+			productReference = E493B9182351D53300DE83A6 /* FootballChamps.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E493B92D2351D53600DE83A6 /* FootballCampsTests */ = {
+		E493B92D2351D53600DE83A6 /* FootballChampsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E493B93A2351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballCampsTests" */;
+			buildConfigurationList = E493B93A2351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballChampsTests" */;
 			buildPhases = (
 				29AF678CB3A122D4293092DB /* [CP] Check Pods Manifest.lock */,
 				E493B92A2351D53600DE83A6 /* Sources */,
@@ -324,9 +324,9 @@
 			dependencies = (
 				E493B9302351D53600DE83A6 /* PBXTargetDependency */,
 			);
-			name = FootballCampsTests;
+			name = FootballChampsTests;
 			productName = FootballCampsTests;
-			productReference = E493B92E2351D53600DE83A6 /* FootballCampsTests.xctest */;
+			productReference = E493B92E2351D53600DE83A6 /* FootballChampsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -348,7 +348,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E493B9132351D53300DE83A6 /* Build configuration list for PBXProject "FootballCamps" */;
+			buildConfigurationList = E493B9132351D53300DE83A6 /* Build configuration list for PBXProject "FootballChamps" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -361,8 +361,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E493B9172351D53300DE83A6 /* FootballCamps */,
-				E493B92D2351D53600DE83A6 /* FootballCampsTests */,
+				E493B9172351D53300DE83A6 /* FootballChamps */,
+				E493B92D2351D53600DE83A6 /* FootballChampsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -495,7 +495,7 @@
 /* Begin PBXTargetDependency section */
 		E493B9302351D53600DE83A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E493B9172351D53300DE83A6 /* FootballCamps */;
+			target = E493B9172351D53300DE83A6 /* FootballChamps */;
 			targetProxy = E493B92F2351D53600DE83A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -646,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com..FootballCamps;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FootballChamps;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -664,7 +664,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com..FootballCamps;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FootballChamps;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -688,7 +688,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballCamps.app/FootballCamps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballChamps.app/FootballChamps";
 			};
 			name = Debug;
 		};
@@ -710,14 +710,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballCamps.app/FootballCamps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballChamps.app/FootballChamps";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E493B9132351D53300DE83A6 /* Build configuration list for PBXProject "FootballCamps" */ = {
+		E493B9132351D53300DE83A6 /* Build configuration list for PBXProject "FootballChamps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E493B9352351D53600DE83A6 /* Debug */,
@@ -726,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E493B9372351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballCamps" */ = {
+		E493B9372351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballChamps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E493B9382351D53600DE83A6 /* Debug */,
@@ -735,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E493B93A2351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballCampsTests" */ = {
+		E493B93A2351D53600DE83A6 /* Build configuration list for PBXNativeTarget "FootballChampsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E493B93B2351D53600DE83A6 /* Debug */,
