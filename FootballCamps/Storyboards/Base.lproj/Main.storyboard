@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDx-eS-8st">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +34,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Club List" id="8Q4-HS-fDW"/>
+                    <navigationItem key="navigationItem" title="Club List" id="8Q4-HS-fDW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gft-cZ-5Jb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sorting" id="fP9-XX-B14">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="sortingButtonPressed:" destination="BYZ-38-t0r" id="3N6-oe-vU4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FIq-ZG-lG9" id="V9s-Mo-rjT"/>
                     </connections>
@@ -42,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--Club Details View Controller-->
+        <!--Club Details-->
         <scene sceneID="v52-bp-zs5">
             <objects>
                 <viewController storyboardIdentifier="ClubDetailsViewController" id="Fvv-Fj-Ndd" customClass="ClubDetailsViewController" customModule="FootballCamps" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,15 +59,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zia-w6-Df2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyn-hS-Wwi">
                                 <rect key="frame" x="0.0" y="44" width="414" height="245.5"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-sa-gHX">
-                                <rect key="frame" x="20" y="269.5" width="374" height="0.0"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCC-sa-gHX">
+                                        <rect key="frame" x="10" y="235.5" width="394" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zia-w6-Df2">
+                                        <rect key="frame" x="62" y="37" width="290" height="171.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zia-w6-Df2" firstAttribute="centerX" secondItem="Iyn-hS-Wwi" secondAttribute="centerX" id="0sb-0D-Ssx"/>
+                                    <constraint firstItem="zia-w6-Df2" firstAttribute="width" secondItem="Iyn-hS-Wwi" secondAttribute="width" multiplier="0.7" id="2hO-rV-bKn"/>
+                                    <constraint firstAttribute="trailing" secondItem="VCC-sa-gHX" secondAttribute="trailing" constant="10" id="Gkp-UO-9Zx"/>
+                                    <constraint firstItem="zia-w6-Df2" firstAttribute="centerY" secondItem="Iyn-hS-Wwi" secondAttribute="centerY" id="OUy-Ep-TQ4"/>
+                                    <constraint firstAttribute="bottom" secondItem="VCC-sa-gHX" secondAttribute="bottom" constant="10" id="ZUF-Sp-cZs"/>
+                                    <constraint firstItem="zia-w6-Df2" firstAttribute="height" secondItem="Iyn-hS-Wwi" secondAttribute="height" multiplier="0.7" id="fw7-xf-uyn"/>
+                                    <constraint firstItem="VCC-sa-gHX" firstAttribute="leading" secondItem="Iyn-hS-Wwi" secondAttribute="leading" constant="10" id="kKZ-o5-Beq"/>
+                                </constraints>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hOM-R8-Mdz">
                                 <rect key="frame" x="0.0" y="289.5" width="414" height="572.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -70,20 +95,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hOM-R8-Mdz" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="5kz-g7-DfZ"/>
-                            <constraint firstItem="hOM-R8-Mdz" firstAttribute="top" secondItem="zia-w6-Df2" secondAttribute="bottom" id="Alb-gM-kFi"/>
-                            <constraint firstItem="VCC-sa-gHX" firstAttribute="bottom" secondItem="zia-w6-Df2" secondAttribute="bottom" constant="-20" id="Iv3-zH-INR"/>
-                            <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="VCC-sa-gHX" secondAttribute="trailing" constant="20" id="OgM-tN-CBz"/>
-                            <constraint firstItem="zia-w6-Df2" firstAttribute="top" secondItem="yor-g9-fWn" secondAttribute="top" id="UCW-rd-NR2"/>
+                            <constraint firstItem="Iyn-hS-Wwi" firstAttribute="height" secondItem="yor-g9-fWn" secondAttribute="height" multiplier="0.3" id="FvH-fL-GnS"/>
+                            <constraint firstItem="Iyn-hS-Wwi" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="Sod-w8-djA"/>
+                            <constraint firstItem="hOM-R8-Mdz" firstAttribute="top" secondItem="Iyn-hS-Wwi" secondAttribute="bottom" id="Tnc-dI-NHK"/>
+                            <constraint firstItem="Iyn-hS-Wwi" firstAttribute="top" secondItem="yor-g9-fWn" secondAttribute="top" id="bm3-kZ-Wn6"/>
                             <constraint firstItem="yor-g9-fWn" firstAttribute="bottom" secondItem="hOM-R8-Mdz" secondAttribute="bottom" id="fA0-Ft-CXv"/>
-                            <constraint firstItem="zia-w6-Df2" firstAttribute="height" secondItem="yor-g9-fWn" secondAttribute="height" multiplier="0.3" id="gl0-6E-fcp"/>
-                            <constraint firstItem="zia-w6-Df2" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="lfL-sc-dbf"/>
-                            <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="zia-w6-Df2" secondAttribute="trailing" id="oJ5-7q-CQv"/>
-                            <constraint firstItem="zia-w6-Df2" firstAttribute="leading" secondItem="yor-g9-fWn" secondAttribute="leading" id="vlo-i3-8kP"/>
+                            <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="Iyn-hS-Wwi" secondAttribute="trailing" id="kc5-So-xfo"/>
                             <constraint firstItem="yor-g9-fWn" firstAttribute="trailing" secondItem="hOM-R8-Mdz" secondAttribute="trailing" id="ydI-c0-tpk"/>
-                            <constraint firstItem="VCC-sa-gHX" firstAttribute="leading" secondItem="zia-w6-Df2" secondAttribute="leading" constant="20" id="zMI-Lt-HTy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yor-g9-fWn"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Club Details" id="v0c-Ch-Qbx">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Xqz-wU-6jj"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="countryLabel" destination="VCC-sa-gHX" id="8nw-xD-TJt"/>
                         <outlet property="detailsTextView" destination="hOM-R8-Mdz" id="eI2-Bm-bUW"/>
@@ -94,14 +118,19 @@
             </objects>
             <point key="canvasLocation" x="1905.7971014492755" y="125.89285714285714"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="8aO-tq-qSM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UDx-eS-8st" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UDx-eS-8st" customClass="BaseNavigationController" customModule="FootballCamps" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tQM-zN-N75">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="navColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -113,4 +142,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="navColor">
+            <color red="0.0039215686274509803" green="0.75686274509803919" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

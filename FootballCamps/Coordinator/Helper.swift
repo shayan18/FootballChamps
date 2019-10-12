@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 class Helper {
     
     static func clubDetails(name: String, country: String, value: String)-> String {

@@ -19,7 +19,8 @@
 		E421348C2351F68500FA0BFD /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421348B2351F68500FA0BFD /* Club.swift */; };
 		E421349223520A1100FA0BFD /* ClubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E421349123520A1100FA0BFD /* ClubViewModel.swift */; };
 		E48861B62351F8070064F80D /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48861B52351F8070064F80D /* Extension+UITableViewCell.swift */; };
-		E48861B82351F90C0064F80D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48861B72351F90C0064F80D /* Reusable.swift */; };
+		E48B95B92352663000CE1C3D /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B95B82352663000CE1C3D /* ClassNameProtocol.swift */; };
+		E48B95BC23526C4200CE1C3D /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B95BB23526C4200CE1C3D /* Extension+UILabel.swift */; };
 		E493B91C2351D53300DE83A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B91B2351D53300DE83A6 /* AppDelegate.swift */; };
 		E493B91E2351D53300DE83A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B91D2351D53300DE83A6 /* SceneDelegate.swift */; };
 		E493B9202351D53300DE83A6 /* ClubListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B91F2351D53300DE83A6 /* ClubListViewController.swift */; };
@@ -63,7 +64,8 @@
 		E421348B2351F68500FA0BFD /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		E421349123520A1100FA0BFD /* ClubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewModel.swift; sourceTree = "<group>"; };
 		E48861B52351F8070064F80D /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
-		E48861B72351F90C0064F80D /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		E48B95B82352663000CE1C3D /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		E48B95BB23526C4200CE1C3D /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
 		E493B9182351D53300DE83A6 /* FootballCamps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballCamps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B91B2351D53300DE83A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E493B91D2351D53300DE83A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,12 +175,12 @@
 		E421347D2351E4B600FA0BFD /* NetworkConfig */ = {
 			isa = PBXGroup;
 			children = (
-				E42134822351E50300FA0BFD /* APIResult.swift */,
-				E421347F2351E50300FA0BFD /* Constants.swift */,
 				E42134812351E50300FA0BFD /* ClubService.swift */,
-				E42134802351E50300FA0BFD /* Providers.swift */,
-				E421347E2351E50300FA0BFD /* RequestManager.swift */,
 				E4FA029A23521239007F0785 /* ClubManager.swift */,
+				E421347F2351E50300FA0BFD /* Constants.swift */,
+				E42134802351E50300FA0BFD /* Providers.swift */,
+				E42134822351E50300FA0BFD /* APIResult.swift */,
+				E421347E2351E50300FA0BFD /* RequestManager.swift */,
 			);
 			path = NetworkConfig;
 			sourceTree = "<group>";
@@ -197,6 +199,15 @@
 				E421349123520A1100FA0BFD /* ClubViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E48B95BA2352679F00CE1C3D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E4FA02AF23522CE4007F0785 /* Helper.swift */,
+			);
+			name = Helper;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		E493B90F2351D53300DE83A6 = {
@@ -222,17 +233,18 @@
 		E493B91A2351D53300DE83A6 /* FootballCamps */ = {
 			isa = PBXGroup;
 			children = (
-				E421347D2351E4B600FA0BFD /* NetworkConfig */,
 				E42134782351E21800FA0BFD /* ViewControllers */,
 				E421347A2351E23C00FA0BFD /* Storyboards */,
+				E421347B2351E24F00FA0BFD /* Views */,
 				E4213490235209FB00FA0BFD /* ViewModels */,
+				E42134882351F5D400FA0BFD /* Models */,
+				E421347D2351E4B600FA0BFD /* NetworkConfig */,
 				E4FA02A423521832007F0785 /* Extensions */,
 				E4FA02A523521849007F0785 /* Protocols */,
-				E42134882351F5D400FA0BFD /* Models */,
-				E421347B2351E24F00FA0BFD /* Views */,
 				E42134792351E22600FA0BFD /* AppDelegates */,
-				E421347C2351E26C00FA0BFD /* Assets */,
 				E4FA02A623521B8D007F0785 /* Coordinator */,
+				E421347C2351E26C00FA0BFD /* Assets */,
+				E48B95BA2352679F00CE1C3D /* Helper */,
 				E493B9292351D53600DE83A6 /* Info.plist */,
 			);
 			path = FootballCamps;
@@ -251,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				E48861B52351F8070064F80D /* Extension+UITableViewCell.swift */,
+				E48B95BB23526C4200CE1C3D /* Extension+UILabel.swift */,
 				E4FA029F23521786007F0785 /* Extension+UIImage.swift */,
 				E4FA02A22352180C007F0785 /* Extension+UIViewController.swift */,
 			);
@@ -260,9 +273,9 @@
 		E4FA02A523521849007F0785 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E48B95B82352663000CE1C3D /* ClassNameProtocol.swift */,
 				E4FA02A723521BA1007F0785 /* Coordinator.swift */,
 				E4FA02A923521BBD007F0785 /* Storyboarded.swift */,
-				E48861B72351F90C0064F80D /* Reusable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -271,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				E4FA02AB23521BD7007F0785 /* MainCoordinator.swift */,
-				E4FA02AF23522CE4007F0785 /* Helper.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -449,6 +461,7 @@
 				E4FA02AC23521BD7007F0785 /* MainCoordinator.swift in Sources */,
 				E42134852351E50300FA0BFD /* Providers.swift in Sources */,
 				E421349223520A1100FA0BFD /* ClubViewModel.swift in Sources */,
+				E48B95BC23526C4200CE1C3D /* Extension+UILabel.swift in Sources */,
 				E42134872351E50300FA0BFD /* APIResult.swift in Sources */,
 				E42134862351E50300FA0BFD /* ClubService.swift in Sources */,
 				E4FA029B23521239007F0785 /* ClubManager.swift in Sources */,
@@ -457,13 +470,13 @@
 				E4FA02AA23521BBD007F0785 /* Storyboarded.swift in Sources */,
 				E493B9202351D53300DE83A6 /* ClubListViewController.swift in Sources */,
 				E493B93E2351DB6800DE83A6 /* ClubDetailsViewController.swift in Sources */,
-				E48861B82351F90C0064F80D /* Reusable.swift in Sources */,
 				E493B91C2351D53300DE83A6 /* AppDelegate.swift in Sources */,
 				E42134832351E50300FA0BFD /* RequestManager.swift in Sources */,
 				E42134842351E50300FA0BFD /* Constants.swift in Sources */,
 				E42134772351E09C00FA0BFD /* ClubTableViewCell.swift in Sources */,
 				E493B91E2351D53300DE83A6 /* SceneDelegate.swift in Sources */,
 				E4FA02A32352180D007F0785 /* Extension+UIViewController.swift in Sources */,
+				E48B95B92352663000CE1C3D /* ClassNameProtocol.swift in Sources */,
 				E48861B62351F8070064F80D /* Extension+UITableViewCell.swift in Sources */,
 				E4FA02A123521786007F0785 /* Extension+UIImage.swift in Sources */,
 			);

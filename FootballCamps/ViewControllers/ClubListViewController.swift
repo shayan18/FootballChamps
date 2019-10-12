@@ -9,25 +9,27 @@
 import UIKit
 
 class ClubListViewController: UIViewController, Storyboarded {
-
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: Outlets
+    @IBOutlet weak private var tableView: UITableView!
     
+    // MARK: Properties
     weak var coordinator: MainCoordinator?
-
     var clubViewModels = [ClubViewModel]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "ClubTableViewCell", bundle: nil), forCellReuseIdentifier: "ClubTableViewCell")
-     //   self.tableView.registerCell(ClubTableViewCell.self)
+        
+        tableView.register(cellType: ClubTableViewCell.self)
         showClubs()
     }
-
+    // API Request
     private func showClubs() {
         ClubManager.getClubList { [weak self] (result) in
             switch result {
             case .success(let clubList):
                 self?.clubViewModels = clubList.map{ClubViewModel(club: $0)}
+                
+                self?.sortByName()
                 self?.tableView.reloadData()
             case .failure(let error):
                 self?.showAlert(message: error)
@@ -35,7 +37,35 @@ class ClubListViewController: UIViewController, Storyboarded {
         }
     }
 }
-
+// MARK: Sorting functions
+extension ClubListViewController {
+    private func sortbyTitles() {
+          self.clubViewModels =  self.clubViewModels.sorted {$0.titles > $1.titles}
+      }
+      
+      private func sortByName() {
+          self.clubViewModels =  self.clubViewModels.sorted { $0.name < $1.name}
+                                  
+      }
+}
+// MARK: Button Actions
+extension ClubListViewController {
+    @IBAction func sortingButtonPressed(_ sender: UIBarButtonItem) {
+        //sorting logic via sender tag
+         if sender.tag == 0 {
+            
+            self.sortbyTitles()
+                 sender.tag = 1
+         }
+             else {
+            self.sortByName()
+                 sender.tag -= 1
+         }
+         self.tableView.reloadData()
+         
+      }
+}
+// MARK: TableView Delegates
 extension ClubListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,13 +75,18 @@ extension ClubListViewController: UITableViewDelegate, UITableViewDataSource {
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ClubTableViewCell
+        let cell = tableView.dequeueReusableCell(with: ClubTableViewCell.self, for: indexPath) as ClubTableViewCell
+
         cell.viewModel = clubViewModels[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        coordinator?.clubDetails(clubViewModels[indexPath.row])
+        let vc = ClubDetailsViewController.instantiate()
+        vc.viewModel = clubViewModels[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        //coordinator?.clubDetails(clubViewModels[indexPath.row])
  
     }
 }

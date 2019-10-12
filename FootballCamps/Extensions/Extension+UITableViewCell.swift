@@ -7,14 +7,14 @@
 //
 
 import UIKit
-
-extension UITableView {
-    func registerCell<Cell: UITableViewCell>(_ cellClass: Cell.Type) {
-        register(cellClass, forCellReuseIdentifier: cellClass.reuseId)
+ extension UITableView {
+    public func register<T: UITableViewCell>(cellType: T.Type, bundle: Bundle? = nil) {
+        let className = cellType.className
+        let nib = UINib(nibName: className, bundle: bundle)
+        register(nib, forCellReuseIdentifier: className)
     }
-    
-    func dequeueReusableCell<Cell: UITableViewCell>(forIndexPath indexPath: IndexPath) -> Cell {
-        guard let cell = self.dequeueReusableCell(withIdentifier: Cell.reuseId, for: indexPath) as? Cell else { fatalError("Fatal error for cell at \(indexPath)")}
-        return cell
+
+    public func dequeueReusableCell<T: UITableViewCell>(with type: T.Type, for indexPath: IndexPath) -> T {
+        return self.dequeueReusableCell(withIdentifier: type.className, for: indexPath) as! T
     }
 }
